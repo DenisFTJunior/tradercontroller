@@ -15,4 +15,4 @@ const table = db.sequelize.define('GainsLoss', {
   }
 })
 
-module.exports ={table:table}
+module.exports.table = table
