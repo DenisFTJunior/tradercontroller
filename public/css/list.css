@@ -1,0 +1,9 @@
+.flex-div{
+  margin: 3vw 1vw 1vw 3vw;
+  display: flex;
+  justify-content: center;
+}
+
+.dayDiv{
+  order: 1;
+}
