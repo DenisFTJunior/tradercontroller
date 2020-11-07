@@ -23,7 +23,14 @@ app.get('/', function(req,res){
   return res.render('index');
 })
 
-app.post('/add',(req,res)=>{return controller.createGainLoss(req,res)})
-app.get('/delete', (req,res)=>{return controller.deleteFila()})
+app.post('/add',(req,res)=> 
+  table.create({
+    day : req.body.day,
+    entrada : req.body.entrada,
+    resultado : req.body.resultado,
+    lucro : req.body.lucro  
+  }).then(()=>{res.redirect('/')} ).catch(err=> {throw err}))
+
+app.get('/delete', (req,res)=>{return controller.deleteFila(table.req.body.id)})
 
 app.listen('8081')

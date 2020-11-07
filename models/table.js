@@ -1,7 +1,7 @@
 const db = require('./db')
 
 const table = db.sequelize.define('GainsLoss', {
-  week:{
+  day:{
     type: db.Sequelize.DATE
   },
   entrada:{
@@ -14,5 +14,8 @@ const table = db.sequelize.define('GainsLoss', {
     type:db.Sequelize.FLOAT
   }
 })
+
+table.sync({force:true})
+
 
 module.exports.table = table
