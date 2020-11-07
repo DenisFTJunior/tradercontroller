@@ -1,4 +1,4 @@
-const table = require('./models/table')
+const table = require('./models/table').table
 
 const express = require ("express")
 const app = express()
@@ -13,7 +13,7 @@ function createGainLoss(req,res){
     entrada : req.body.entrada,
     resultado : req.body.resultado,
     total : req.body.total
-  }).res.redirect('/add')
+  }).then(()=> res.redirect('/'))
 }
 
 function deleteFila(id){

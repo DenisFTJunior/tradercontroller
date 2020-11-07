@@ -15,16 +15,12 @@ app.use(bodyParser.json())
 app.use(express.static('public'))
 
 //entradas
-const table = require('./models/table')
+const table = require('./models/table').table
 const controller = require('./controller')
 
 //Rotas
 app.get('/', function(req,res){
   return res.render('index');
-})
-
-app.get('/add', (req,res)=>{
-  return res.render('index')
 })
 
 app.post('/add',(req,res)=>{return controller.createGainLoss(req,res)})
