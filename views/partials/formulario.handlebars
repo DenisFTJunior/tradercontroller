@@ -1,0 +1,14 @@
+{{#extend "head"}}
+    <link rel="stylesheet" href="../public/css/formulario.css"/>
+{{/extend}}
+
+<form action ='/add' method="post">
+  <fieldset>
+    <legend>Entrada</legend>
+    <input type="date" name="day">
+    <input type="number" name="entrada" placeholder="ENTRADA">
+    <input type="number" name="saida" placeholder="SAIDA">
+    <input type="number" name="lucro" placeholder="LUCRO" disabled>
+    <input type='submit' value="GO">
+  </fieldset>
+</form>
