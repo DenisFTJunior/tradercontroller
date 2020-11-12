@@ -1,6 +1,7 @@
 const express = require("express");
 
 const app = express();
+const path = require("path")
 
 const routes = require("./routes");
 const helpers = require('./views/helpers/helper').helpers();
@@ -17,7 +18,7 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
 //css and js to handlebars
-app.use(express.static('public'))
+app.use(express.static(path.join(__dirname,'./public/')))
 
 app.use(routes);
 

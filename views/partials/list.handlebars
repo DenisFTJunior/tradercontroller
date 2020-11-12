@@ -1,10 +1,15 @@
-{{#each entradas}}
+{{#extend "head"}}
+    <link rel="stylesheet" href="css/list.css"/>
+{{/extend}}
 
-<div>
-  <h2>{{day}}</h2>
-  <h2>{{entradas}}</h2>
-  <h2>{{saidas}}</h2>
-  <h2>{{lucro}}</h2>
-</div>
 
+{{#each entrada}}
+  <div class="entrada-div">
+    <h2>{{../day}}</h2>
+    <h2>{{../entrada}}</h2>
+    <h2>{{../saida}}</h2>
+    <h2>{{../lucro}}</h2>
+  </div>
 {{/each}}
+
+

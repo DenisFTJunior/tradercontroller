@@ -1,7 +1,8 @@
 const table = require('../models/table').table
 
-function index(req,res){
-  return res.render('index');
+async function index(req,res){
+  let data = await table.findAll();
+  return res.render('index', {entrada:data});
 }
 
 async function remove(req, res){
@@ -17,7 +18,7 @@ async function add(req, res){
   const tableExchange = {
     day : req.body.day,
     entrada : req.body.entrada,
-    resultado : req.body.resultado,
+    resultado : req.body.saida,
     lucro : req.body.lucro  
   }
 
@@ -27,7 +28,7 @@ async function add(req, res){
     return res.redirect('/');
   }
 
-  return res.redirect('/', {message:"Algo deu errado!!" });
+  return res.redirect('/');
 }
 
 async function update(req, res) {
@@ -36,16 +37,16 @@ async function update(req, res) {
     const tableData = {
         day: req.body.day,
         entrada: req.body.entrada,
-        resultado: req.body.resultado,
+        resultado: req.body.saida,
         lucro: req.body.lucro  
     }
 
-    const tableUpdated = await table.update(tableData, { where { 'id': id }})
+    const tableUpdated = await table.update(tableData, { where:  {'id': id} })
 
     if (tableUpdated == 1) {
        return res.redirect('/');
     }
-    return res.redirect('/', { message: "Algo deu errado!!" });
+    return res.redirect('/');
 }
 
 module.exports = {
