@@ -1,8 +1,25 @@
 fieldset{
   border-radius: 5px;
-  border: 2px groove yellow;
+  background: rgba(40, 40, 131, 0.596);
+  margin-bottom: 2vw;
+  display: flex;
+  padding-left: 9vw;
+  padding-right: 9vw;
+}
+legend{
+  font-size: 2vw;
+  background: rgb(22, 22, 78);
+  color: azure;
+  padding: 0 0.3vw  0 0.3vw;
+  border-radius: 3px;
 }
 
-.day{
-  display: inline-block;
+input{
+  width: 15vw;
 }
+
+.enter-button:hover{
+  background: rgb(45, 45, 94,0.15);
+  color: azure;
+}
+
