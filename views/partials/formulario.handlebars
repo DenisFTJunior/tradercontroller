@@ -6,9 +6,25 @@
   <fieldset>
     <legend>Entrada</legend>
     <input type="date" name="day">
+
     <input type="number" name="entrada" placeholder="ENTRADA">
-    <input type="number" name="saida" placeholder="SAIDA">
-    <input type="number" name="lucro" placeholder="LUCRO" disabled>
+    
+    <input type="number" name="porcentagem" min="0" max="100" placeholder="%"
+     oninput="validity.valid ? this.save = value : value = this.save;">
+
+    <label class="container"> 
+      <span class="resultPositive">
+        <input type="radio" name="result" class="resultPositive" value="positive">
+        <span class="checkmark"></span>
+      </span> 
+    </label>
+    <label class="container">
+      <span class="resultNegative">
+        <input type="radio" name="result" value="negative">
+        <span class="checkmark"></span>
+      </span> 
+      
+    </label>
     <input type='submit' class="enter-button" value="GO">
   </fieldset>
 </form>

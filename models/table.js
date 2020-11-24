@@ -7,11 +7,11 @@ const table = db.sequelize.define('GainsLoss', {
   entrada:{
     type: db.Sequelize.FLOAT
   },
-  resultado: {
+  porcentagem: {
     type:db.Sequelize.FLOAT
   },
-  total : {
-    type:db.Sequelize.FLOAT
+   result:{
+    type:db.Sequelize.STRING 
   }
 })
 

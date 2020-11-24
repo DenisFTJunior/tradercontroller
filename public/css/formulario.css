@@ -18,8 +18,53 @@ input{
   width: 15vw;
 }
 
+
 .enter-button:hover{
   background: rgb(45, 45, 94,0.15);
   color: azure;
+}
+
+
+.container{
+  width: 7.5vw;
+  margin-left: 0.5vw;
+}
+
+.resultPositive{
+  display: inline-block;
+  width: 7vw;
+  background: darkgreen;
+  height: 2.5vw;
+}
+.resultNegative{
+  display: inline-block;
+  background: crimson;
+  width: 7vw;
+  height: 2.5vw;
+}
+
+.container input:checked ~ .checkmark:after {
+  background-color : rgb(7, 255, 152);
+  display: inline-block;
+  width: 6vw;
+  height: 1.5vw;
+  margin: 0.5vw;
+}
+
+.checkmark {
+  width: 7.5vw;
+}
+
+.checkmark:after {
+  content: "";
+  display: none;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 7.5vw;
+  height: 2.5vw;
 }
 

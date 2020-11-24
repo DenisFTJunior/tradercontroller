@@ -15,6 +15,9 @@ var helpers = function() {
         // clear the block
         blocks[name] = [];
         return val;
+    },
+    conditions: value => {
+      return value === "positive"
     }
   }
 };

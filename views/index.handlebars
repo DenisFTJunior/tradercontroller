@@ -1,2 +1,9 @@
+{{#extend "head"}}
+    <link rel="stylesheet" href="css/index.css"/>
+{{/extend}}
+
+{{#each error}}
+    <div class="error-message">{{this}}</div>
+{{/each}}
 {{>formulario}}
-{{>list entrada = entrada}}
+{{>list}}

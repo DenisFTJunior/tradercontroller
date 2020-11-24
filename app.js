@@ -6,7 +6,6 @@ const path = require("path")
 const routes = require("./routes");
 const helpers = require('./views/helpers/helper').helpers();
 
-
 //handlebars config
 const handlebars = require ("express-handlebars")
 app.engine('handlebars', handlebars({defaultLayout:'main',  helpers}))

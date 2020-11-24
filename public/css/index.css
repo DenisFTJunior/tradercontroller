@@ -3,3 +3,16 @@
     padding: 0px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif,
 }
+
+.error-message{
+    display: block;
+    border-radius: 50px;
+    width: 78vw;
+    height: 2.5vw;
+    background: crimson;
+    padding: auto;
+    color: white;
+    margin:  2vw 10vw 2vw 10vw;
+    font-size: 2vw;
+    padding-left: 2vw;
+}

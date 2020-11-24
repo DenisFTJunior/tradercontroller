@@ -1,15 +1,27 @@
 {{#extend "head"}}
     <link rel="stylesheet" href="css/list.css"/>
+    <script src="js/list.js"></script>
 {{/extend}}
 
-
+<div class="container-list">
 {{#each entrada}}
-  <div class="entrada-div">
-    <div>{{../day}}</div>
-    <div>{{../entrada}}</div>
-    <div>{{../saida}}</div>
-    <div>{{../lucro}}</div>
+  {{#if (conditions result)}}
+  <div class="principal-div is-green">
+      <div class="date-div"> {{this.day}} </div>
+      <div class="entrada-div">{{this.entrada}}</div>
+      <div class="porcento-div"> {{this.porcentagem}} </div>
   </div>
+  {{else}}
+  <div class="principal-div is-red">
+      <div class="date-div"> {{this.day}} </div>
+      <div class="entrada-div">{{this.entrada}}</div>
+      <div class="porcento-div"> {{this.porcentagem}} </div>
+  </div>
+  {{/if}}
+  
+  
+
 {{/each}}
+</div>
 
 
