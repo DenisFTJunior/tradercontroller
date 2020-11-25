@@ -10,9 +10,12 @@ const table = db.sequelize.define('GainsLoss', {
   porcentagem: {
     type:db.Sequelize.FLOAT
   },
-   result:{
-    type:db.Sequelize.STRING 
-  }
+  result:{
+    type:db.Sequelize.STRING(20)
+  },
+  lucro: {
+    type:db.Sequelize.FLOAT
+  },
 })
 
 module.exports.table = table

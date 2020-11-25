@@ -18,7 +18,7 @@ var helpers = function() {
     },
     conditions: value => {
       return value === "positive"
-    }
+    },
   }
 };
 module.exports.helpers = helpers;

@@ -1,13 +1,30 @@
+.container-list{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  width: 80vw;
+  margin: 2vw 10vw 2vw 10vw;
+  
+}
+
 .principal-div{
   width: 10vw;
-  height: 10vw;
+  height: 12vw;
   border-radius: 5px;
   display: inline-block;
   min-width: 100px;
-  min-height: 100px;
+  min-height: 120px;
   font-size: 10px;
   margin: 1vw;
 }
+
+  .is-red{
+    background: rgb(201, 61, 61);
+  }
+  .is-green{
+    background: rgb(42, 128, 42);
+  }
+
 
 .date-div{
   background: white;
@@ -18,18 +35,29 @@
   min-width: 80px;
 }
 
-.is-red{
-  background: rgb(201, 61, 61);
-}
-.is-green{
-  background: rgb(42, 128, 42);
+.entrada-div{
+  width: 5vw;
+  min-width: 50px;
+  margin: 0.5vw;
+  font-size: 1vw;
+  padding-left: 0.4vw;
+  color: aliceblue;
+  background: rgb(105, 161, 21);
+  display: inline-block;
 }
 
-.container-list{
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-start;
-  width: 80vw;
-  margin: 2vw 10vw 2vw 10vw;
-  
+.porcento-div{
+  width: 3vw;
+  min-width: 30px;
+  font-size: 1vw;
+  margin: 0.5vw;
+  padding-left: 0.4vw;
+  color: aliceblue;
+  background: rgb(105, 161, 21);
+  display: inline-block;
+}
+
+.lucro{
+  font-size: 2vw;
+  margin-left: 1vw;
 }

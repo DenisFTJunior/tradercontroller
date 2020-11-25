@@ -13,6 +13,7 @@ async function index(req,res){
               entrada: data.entrada,
               porcentagem: data.porcentagem,
               result: data.result,
+              lucro: data.lucro
           }
       })
   }
@@ -35,16 +36,25 @@ async function add(req, res){
     error.push("PRENCHA TODOS OS CAMPOS")
     return res.redirect('/')
   }
-  if(req.body.entrada == null || req.body.procentagem == null|| req.body.result == null || req.body.day== null){
+  if(req.body.entrada == null || req.body.porcentagem == null|| req.body.result == null || req.body.day== null){
     error.push("PRENCHA TODOS OS CAMPOS")
      return res.redirect('/')
   }
+
+  let lucro =0;
+  if(req.body.result === "positive"){
+    lucro = req.body.entrada*(req.body.porcentagem/100)
+  }else{
+    lucro -=  req.body.entrada
+  }
+
 
   const tableExchange = {
     day : req.body.day,
     entrada : req.body.entrada,
     porcentagem : req.body.porcentagem,
-    result : req.body.result  
+    result : req.body.result,
+    lucro: lucro,
   }
 
   const tableSaved = await table.create(tableExchange);

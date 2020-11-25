@@ -7,7 +7,7 @@
     <legend>Entrada</legend>
     <input type="date" name="day">
 
-    <input type="number" name="entrada" placeholder="ENTRADA">
+    <input type="number" step="0.01" min="0" name="entrada" placeholder="ENTRADA">
     
     <input type="number" name="porcentagem" min="0" max="100" placeholder="%"
      oninput="validity.valid ? this.save = value : value = this.save;">
