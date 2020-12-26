@@ -10,6 +10,14 @@
       <div class="entrada-div">R${{this.entrada}}</div>
       <div class="porcento-div"> {{this.porcentagem}}% </div>
       <div class="lucro"> + R${{this.lucro}}</div>
+      <form action="/delete" method="POST">
+        <input type="hidden" name = "id" value="{{this.id}}" >
+        <input type="submit" class = "op-button" value="DELETE">
+      </form>
+      <form action="/update" method="POST">
+        <input type="hidden" name = "id" value="{{this.id}}" >
+        <input type="submit" class = "op-button" value="UPDATE">
+      </form>
   </div>
   {{else}}
   <div class="principal-div is-red">
@@ -17,8 +25,17 @@
       <div class="entrada-div">R${{this.entrada}}</div>
       <div class="porcento-div"> {{this.porcentagem}}% </div>
       <div class="lucro">R${{this.lucro}}</div>
+      <form action="/delete" method="POST">
+        <input type="hidden" name = "id" value = "{{this.id}}">
+        <input type="submit" value="DELETE">
+      </form>
+      <form action="/update" method="POST">
+        <input type="hidden" name = "id" value="{{this.id}}" >
+        <input type="submit" class = "op-button" value="UPDATE">
+      </form>
   </div>
   {{/if}}
+  
 {{/each}}
 </div>
 

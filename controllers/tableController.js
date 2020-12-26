@@ -9,6 +9,7 @@ async function index(req,res){
          let dataString = data.day.toString()
          dataString = dataString.substring(3,15)
           return {
+              id: data.id,
               day: dataString,
               entrada: data.entrada,
               porcentagem: data.porcentagem,
@@ -22,12 +23,10 @@ async function index(req,res){
 
 
 async function remove(req, res){
-  //chegar token posteriormente
   const id = req.body.id;
-  
-  await table.destroy({where: {'id': id}});
+  await table.destroy({where: {"id": id}});
+  return res.redirect('/')
 
-  return res.redirect('/');
 }
 
 async function add(req, res){
@@ -73,7 +72,8 @@ async function update(req, res) {
     return res.redirect('/')
   }
     if(req.body.entrada == null || req.body.porcentagem == null|| req.body.result == null || req.body.day== null){
-      error.push("Prencha todos os campos")
+      error.push("PRENCHA TODOS OS CAMPOS")
+      return res.redirect('/')
     }
 
     const id = req.body.id;

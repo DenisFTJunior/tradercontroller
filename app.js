@@ -19,6 +19,7 @@ app.use(bodyParser.json())
 //css and js to handlebars
 app.use(express.static(path.join(__dirname,'./public/')))
 
+//Config rotas
 app.use(routes);
 
 module.exports = app;
